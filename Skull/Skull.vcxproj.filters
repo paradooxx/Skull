@@ -4,6 +4,9 @@
     <Filter Include="Skull">
       <UniqueIdentifier>{909E190E-FCB2-41BF-C534-E51E31083EF0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Skull\Events">
+      <UniqueIdentifier>{7448D969-60AB-680E-0931-A1C4F5723491}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Skull.h" />
@@ -15,6 +18,9 @@
     </ClInclude>
     <ClInclude Include="src\Skull\EntryPoint.h">
       <Filter>Skull</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Skull\Events\Event.h">
+      <Filter>Skull\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Skull\Log.h">
       <Filter>Skull</Filter>
