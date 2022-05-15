@@ -25,6 +25,7 @@
     <ClInclude Include="src\Skull\Log.h">
       <Filter>Skull</Filter>
     </ClInclude>
+    <ClInclude Include="src\Skull\Events\ApplicationEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Skull\Application.cpp">
