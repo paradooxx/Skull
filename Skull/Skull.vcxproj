@@ -149,6 +149,7 @@
     <ClInclude Include="src\Skull\EntryPoint.h" />
     <ClInclude Include="src\Skull\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Skull\Events\Event.h" />
+    <ClInclude Include="src\Skull\Events\MouseEvent.h" />
     <ClInclude Include="src\Skull\Log.h" />
   </ItemGroup>
   <ItemGroup>

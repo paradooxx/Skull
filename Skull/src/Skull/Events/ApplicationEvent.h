@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Skull/Events/Event.h"
-#include <sstream>
 
 namespace Skull
 {
@@ -27,7 +26,7 @@ namespace Skull
 		unsigned int m_Width, m_Height;
 	};
 
-	class WindowCloseEvent : public Event
+	class SKULL_API WindowCloseEvent : public Event
 	{
 	public:
 		WindowCloseEvent() = default;
@@ -36,7 +35,7 @@ namespace Skull
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class AppTickEvent : public Event
+	class SKULL_API AppTickEvent : public Event
 	{
 	public:
 		AppTickEvent() = default;
@@ -45,7 +44,7 @@ namespace Skull
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class AppUpdateEvent : public Event
+	class SKULL_API AppUpdateEvent : public Event
 	{
 	public:
 		AppUpdateEvent() = default;
@@ -54,7 +53,7 @@ namespace Skull
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 
-	class AppRenderEvent : public Event
+	class SKULL_API AppRenderEvent : public Event
 	{
 	public:
 		AppRenderEvent() = default;
