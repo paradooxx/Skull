@@ -2,8 +2,9 @@
 
 #include <memory>
 #include "Core.h"
+
 #include "spdlog/spdlog.h"
-#include "spdlog/sinks/stdout_color_sinks.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Skull {
 	class SKULL_API Log
@@ -21,15 +22,15 @@ namespace Skull {
 }
 
 //core log macros
-#define SK_CORE_TRACE(...) ::Skull::Log::GetCoreLogger()->trace(_VA_ARGS_)
-#define SK_CORE_INFO(...)  ::Skull::Log::GetCoreLogger()->info(_VA_ARGS_)
-#define SK_CORE_WARN(...)  ::Skull::Log::GetCoreLogger()->warn(_VA_ARGS_)
-#define SK_CORE_ERROR(...) ::Skull::Log::GetCoreLogger()->error(_VA_ARGS_)
-#define SK_CORE_FATAL(...) ::Skull::Log::GetCoreLogger()->fatal(_VA_ARGS_)
+#define SK_CORE_TRACE(...) ::Skull::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define SK_CORE_INFO(...)  ::Skull::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define SK_CORE_WARN(...)  ::Skull::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define SK_CORE_ERROR(...) ::Skull::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define SK_CORE_FATAL(...) ::Skull::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
 //client log macros
-#define SK_TRACE(...) ::Skull::Log::GetClientLogger()->trace(_VA_ARGS_)
-#define SK_INFO(...)  ::Skull::Log::GetClientLogger()->info(_VA_ARGS_)
-#define SK_WARN(...)  ::Skull::Log::GetClientLogger()->warn(_VA_ARGS_)
-#define SK_ERROR(...) ::Skull::Log::GetClientLogger()->error(_VA_ARGS_)
-#define SK_FATAL(...) ::Skull::Log::GetClientLogger()->fatal(_VA_ARGS_)
+#define SK_TRACE(...) ::Skull::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define SK_INFO(...)  ::Skull::Log::GetClientLogger()->info(__VA_ARGS__)
+#define SK_WARN(...)  ::Skull::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define SK_ERROR(...) ::Skull::Log::GetClientLogger()->error(__VA_ARGS__)
+#define SK_FATAL(...) ::Skull::Log::GetClientLogger()->fatal(__VA_ARGS__)

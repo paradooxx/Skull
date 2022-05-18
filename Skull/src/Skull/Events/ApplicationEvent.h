@@ -16,7 +16,7 @@ namespace Skull
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "WindowResizeEvent: " << m_Width << ", " << m_Height;
+			ss << "WindowResizeEvent: " << GetWidth() << ", " << GetHeight() ;
 			return ss.str();
 		}
 

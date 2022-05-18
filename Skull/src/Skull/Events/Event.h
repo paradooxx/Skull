@@ -5,7 +5,6 @@
 #include <string>
 #include <functional>
 #include <sstream>
-
 namespace Skull
 {
 	enum class EventType
@@ -27,7 +26,7 @@ namespace Skull
 		EventCategoryMouseButton = BIT(4)
 	};
 
-#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type;}\
+#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
 								virtual EventType GetEventType() const override { return GetStaticType(); }\
 								virtual const char* GetName() const override { return #type;}
 
@@ -39,7 +38,7 @@ namespace Skull
 	public:
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
-		virtual int GetCategoryName() const = 0;
+		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
 		inline bool IsInCategory(EventCategory category)
@@ -47,7 +46,7 @@ namespace Skull
 			return GetCategoryFlags() & category;
 		}
 	protected:
-		bool m_Handle = false;		//to check if event is handled
+		bool m_Handle = false;		//to check if the event is handled
 	};
 
 	class EventDispatcher
@@ -62,7 +61,7 @@ namespace Skull
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handle = func(*(t*)&m_Event);
+				m_Event.m_Handle = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

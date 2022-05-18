@@ -6,6 +6,8 @@ extern Skull::Application* Skull::CreateApplication();
 
 int main(int argc, char** argv)
 {
+	Skull::Log::Init();
+
 	auto app = Skull::CreateApplication();
 	app->Run();
 	delete app;
