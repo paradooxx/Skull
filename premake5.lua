@@ -18,6 +18,9 @@ project "Skull"
 	targetdir ("bin/" ..outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" ..outputdir .. "/%{prj.name}")
 
+	pchheader "skpch.h"
+	pchsource "Skull/src/skpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

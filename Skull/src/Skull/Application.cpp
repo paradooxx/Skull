@@ -1,3 +1,4 @@
+#include "skpch.h"
 #include "Application.h"
 
 #include "Skull/Events/ApplicationEvent.h"
@@ -21,6 +22,4 @@ namespace Skull
 		SK_TRACE(e);
 		while (true);
 	}
-
-
 }

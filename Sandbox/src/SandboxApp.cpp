@@ -1,3 +1,4 @@
+#include "skpch.h"
 #include <Skull.h>
 
 class Sandbox : public Skull::Application

@@ -2,9 +2,6 @@
 
 #include "Skull/Core.h"
 
-#include <string>
-#include <functional>
-#include <sstream>
 namespace Skull
 {
 	enum class EventType
