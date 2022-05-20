@@ -10,4 +10,13 @@
 	#error Skull only Supports Windows
 #endif
 
+#ifdef SK_ENABLE_ASSERTS
+	#define SK_ASSERT(x, ...) {if(!(x)) {SK_ERROR("Assertion Failed!: {0}", __VA_ARGS_); __debugbreak(); }}
+	#define SK_CORE_ASSERT(x, ...) {if(!(x)) {SK_CORE_ERROR("Assertion Failed!: {0}", __VA_ARGS_); __debugbreak(); }}
+#else
+	#define SK_ASSERT(x, ...)
+	#define SK_CORE_ASSERT(x, ...)
+#endif
+	
+
 #define BIT(x) (1 << x)

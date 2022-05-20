@@ -35,6 +35,8 @@
       <Filter>Skull</Filter>
     </ClInclude>
     <ClInclude Include="src\skpch.h" />
+    <ClInclude Include="src\Skull\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Skull\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Skull</Filter>
     </ClCompile>
     <ClCompile Include="src\skpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
