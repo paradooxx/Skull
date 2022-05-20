@@ -10,6 +10,12 @@ workspace "Skull"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "Skull/vendor/GLFW/include"
+
+include "Skull/vendor/GLFW"
+
 project "Skull"
 	location "Skull"
 	kind "SharedLib"
@@ -30,7 +36,14 @@ project "Skull"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
